@@ -6,7 +6,6 @@ export default function LoggedIn() {
     
     useEffect( () => {
         let emailMatch = /Uname=(.+)%/
-        initTracker()
         let matches = window.location.href.match(emailMatch)
         setUserID(matches[1])
         console.log(matches[1])
