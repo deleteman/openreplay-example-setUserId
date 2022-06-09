@@ -45,6 +45,11 @@ function reducer(state, action) {
                 state.tracker.start()
                 return state
             }
+            case 'setUID':
+                console.log("Setting the user ID for the current user")
+                state.tracker.setUserID(action.id)
+                return state;
+                break
         }
     }
 
@@ -54,8 +59,12 @@ export default function TrackerProvider({children, config}) {
 
     let value = {
         startTracking: () => dispatch({type: 'start'}),
-        initTracker: () => dispatch({type: 'init'})
+        initTracker: () => dispatch({type: 'init'}),
+        setUserID: (uid) => dispatch({type: 'setUID', id: uid})
     }
+
+    console.log("passing value:")
+    console.log(value)
 
 
     return <TrackerContext.Provider value={value}>{children}</TrackerContext.Provider>
