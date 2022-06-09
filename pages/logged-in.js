@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react"
-import { TrackerContext } from '../context/trackerContext'
+import { TrackerContext } from "../context/trackerContext"
 
-export default function () {
+export default function LoggedIn() {
     const {setUserID, initTracker} = useContext(TrackerContext)
     
     useEffect( () => {
