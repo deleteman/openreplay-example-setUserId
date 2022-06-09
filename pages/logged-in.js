@@ -12,5 +12,5 @@ export default function LoggedIn() {
         console.log(matches[1])
     }, [])
  
-    return (<h1>You're logged in!</h1>)
+    return (<h1>You&apos;re logged in!</h1>)
 }
